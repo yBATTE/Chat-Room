@@ -6,7 +6,7 @@ Este es un espacio interactivo donde puedes conectarte con personas de todo el m
 
 ## Cómo ingresar
 
-Para unirte al chat, simplemente haz clic en el siguiente enlace: [Chat Room](https://peaceful-temporal-mandarin.glitch.me)
+Para unirte al chat, simplemente haz clic en el siguiente enlace: [Chat Room](https://horn-cedar-leaf.glitch.me/)
 
 ## Instrucciones
 
