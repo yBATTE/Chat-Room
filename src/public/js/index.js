@@ -1,11 +1,5 @@
 const socket = io();
 
-// Swal.fire({
-//     title: 'Saludos',
-//     text: 'Mensaje inicial',
-//     icon: 'success'
-// });
-
 let user;
 const chatbox = document.getElementById('chatBox');
 
@@ -32,11 +26,18 @@ chatbox.addEventListener('keyup', evt => {
     }
 });
 
+document.getElementById('sendMessage').addEventListener('click', function() {
+    if(chatbox.value.trim().length > 0) {
+        socket.emit('message', { user, message: chatbox.value});
+        chatbox.value='';
+    }
+});
+
 socket.on('messageLogs', data => {
     let log = document.getElementById('messageLogs');
     let messages = '';
     data.forEach(message => {
-        messages += `${message.user} dice: ${message.message}<br/>`
+        messages += `${message.user} : ${message.message}<br/>`
     });
     log.innerHTML=messages;
 });
